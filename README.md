@@ -7,32 +7,34 @@ An open protocol for the agentic internet — built on email.
 
 ## ✨ What is PAIX?
 
-**PAIX is an open email protocol that standardizes how personal AIs connect, communicate, and act on behalf of individuals.**
-It doesn’t define the format of the content — it defines the logic of interaction.
+**PAIX is an open email protocol that standardizes how personal AIs connect, communicate, and act — on behalf of individuals, and with others.**
+It doesn’t define the content inside the message — it defines how messages are sent, received, verified, and processed across a shared interface.
 
-PAIX turns email into a shared interface between:
+PAIX turns email into a universal communication layer between:
 
 * Individuals
 * Their personal AIs (AI twins)
 * Services and providers
+* **Other people’s personal AIs**
 
-PAIX works where email already works — making it the simplest, most universal way to bootstrap AI-native communication between people and services.
+It works anywhere email works — making it the most practical and universal path into the agentic internet.
 
 ---
 
 ## 🧠 Why PAIX?
 
-The internet wasn’t built for AI agents. Today, personal AIs interact with services by:
+The internet wasn’t designed for autonomous agents. Today, personal AIs must either:
 
-* **Scraping websites** — brittle and error-prone
-* **Using APIs** — rare in consumer apps and costly to implement
+* **Scrape web pages** — fragile, duplicative, not scalable
+* **Use APIs** — rare in consumer services, expensive to build and maintain
 
 **PAIX offers a better way:**
 
-* ✅ **Universal** — email already exists everywhere
-* ✅ **User-controlled** — no reliance on third-party APIs
-* ✅ **Gradual adoption** — works today, evolves over time
-* ✅ **Agent-ready** — AIs can initiate and manage interactions, with human oversight
+* ✅ **Universal** — works with any email-compatible service
+* ✅ **User-controlled** — people (not platforms) initiate and manage relationships
+* ✅ **Gradual adoption** — services can do nothing, recognize, or automate
+* ✅ **Agent-ready** — built for AI-to-AI communication under human supervision
+* ✅ **Interpersonal** — AIs can talk to other people’s AIs, not just services
 
 ---
 
@@ -40,23 +42,24 @@ The internet wasn’t built for AI agents. Today, personal AIs interact with ser
 
 With a PAIX address, you can:
 
-* Let your AI manage cancellations, address updates, receipts, renewals
-* Give services a way to communicate with your AI (without building an API)
-* Enable secure AI-to-AI messaging (e.g. between customer AI and service AI)
-* Embed structured payloads (e.g. via MCP) while maintaining trust and identity
-* Control who can interact with your AI, and revoke that access at any time
+* Let your AI handle tasks like cancellations, address changes, receipts, or renewals
+* Give services a way to communicate directly with your AI — without building an API
+* **Securely message other people’s AIs — for support, collaboration, negotiation, etc.**
+* Enable AI-to-AI communication across users, systems, and services
+* Embed structured formats (e.g. MCP payloads) while preserving user identity and control
+* Revoke, rotate, or move your address at any time
 
 ---
 
 ## 🔁 Designed to Work with Existing Protocols
 
-PAIX **does not replace** protocols like MCP — it complements them.
+PAIX does **not replace** protocols like MCP — it complements them.
 
-* **PAIX handles the interface logic** — how messages are routed, secured, verified, and accessed by AI agents
-* **Other protocols handle the content format** — such as MCP for contextual LLM payloads
+* **PAIX handles the interface logic** — how communication flows between agents, people, and systems
+* **Other protocols define content format** — like MCP for LLM-ready context payloads
 
 **Example:**
-A PAIX email message can carry a structured MCP payload in the body, letting the receiving agent parse it accordingly — while PAIX ensures it came from a verified sender, with trust metadata included.
+A service sends a PAIX message to a customer’s AI. That message contains a structured MCP payload. PAIX ensures the message is authenticated, trusted, and directed to the right AI — while MCP handles what the message contains.
 
 ---
 
@@ -84,72 +87,81 @@ That single address gives you:
 ## 👤 For Individuals
 
 * Use your PAIX address instead of your regular email
-* Let your AI twin manage tasks behind the scenes
-* Rotate, revoke, or migrate your PAIX addresses as needed
-* All messages are visible to both you and your AI
+* Let your AI twin manage repetitive or background tasks
+* Rotate, revoke, or migrate your PAIX addresses at any time
+* All messages are accessible to both you and your AI
+* **Engage with services and other people’s AIs** — not just companies
 
 ---
 
 ## 🏢 For Services
 
-* Already compatible (if you support email)
-* Detect PAIX domains to prevent fake accounts
-* Gradually support structured automation (e.g. billing updates, confirmations)
-* Enable AI-to-AI flows without needing a full API
+* Already compatible if you support email
+* Recognize PAIX domains to reduce spam and fake accounts
+* Support automation (e.g. billing, renewals, notifications) over email
+* **Enable direct AI-to-AI communication** — from your system to a customer’s AI
+* Adopt gradually: do nothing, recognize, verify, or automate
 
 ---
 
 ## 🛠️ For Providers
 
-* Issue and host PAIX addresses (`@paix.yourdomain.com`)
-* Publish trust metadata via `/.well-known/paix`
-* Handle cryptographic signing, key rotation, verifications
-* Optionally issue credentials for age, residency, etc.
-
-**Become a provider** to anchor trust for users and services alike.
+* Host and issue PAIX addresses (e.g. `@paix.yourdomain.com`)
+* Route messages to individuals and their AIs
+* Anchor trust via SPF, DKIM, DMARC, Ed25519, etc.
+* Publish metadata at `/.well-known/paix` for service discovery
+* Optionally issue verifiable credentials (e.g. age, residency)
+* Let users bring their own domain for full ownership
 
 ---
 
 ## 🔐 Trust, Privacy & Compliance
 
-* **Email security:** SPF, DKIM, DMARC
-* **Agent security:** Ed25519 signatures, ECK keys, scoped access
-* **User control:** Revoke or rotate addresses anytime
-* **Regulatory-ready:** GDPR, CCPA, eIDAS, SSI, EU AI Act alignment
-* **Selective disclosure:** Verified data without exposing raw info
+* **Security:** SPF, DKIM, DMARC, Ed25519, key rotation
+* **Privacy:** user-controlled, revocable, verifiable credentials
+* **Compliance:** GDPR, CCPA, eIDAS, SSI, EU AI Act
+* **Selective disclosure:** share proofs (e.g. “over 18”) without raw data
+* **Human-in-the-loop:** users confirm or supervise critical actions
 
 ---
 
 ## 📈 Adoption Path
 
-| Stage               | Description                                                           |
-| ------------------- | --------------------------------------------------------------------- |
-| **0. Do Nothing**   | Treat PAIX email like any other email                                 |
-| **1. Recognition**  | Identify PAIX domains, reduce fraud, route accordingly                |
-| **2. Verification** | Accept provider-signed credentials (age, residency, etc.)             |
-| **3. Automation**   | Support AI-to-AI interaction (billing, renewals, notifications, etc.) |
-| **4. Escalation**   | Optional API flows via ECK for advanced integration                   |
+| Stage               | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| **0. Do Nothing**   | Treat PAIX email like any other message                                |
+| **1. Recognition**  | Detect PAIX domains, reduce fake users, improve routing                |
+| **2. Verification** | Accept provider-signed credentials (age, residency, etc.)              |
+| **3. Automation**   | Enable AI-to-AI messaging (invoices, billing updates, feature toggles) |
+| **4. Escalation**   | Secure HTTPS/API connection using embedded connect keys (ECK)          |
 
 ---
 
 ## 🚀 Status
 
-* PAIX is **live** — first provider: [Prifina](https://www.prifina.com)
-* Early access documentation in `/specs` folder (coming soon)
-* Developer tools and SDKs in progress
+* PAIX is live — first provider: [Prifina](https://www.prifina.com)
+* Early access documentation and specs in `/specs` folder (coming soon)
+* Developer tools and SDKs in development
 
 ---
 
 ## 🤝 Contributing
 
 We welcome contributions!
-Submit issues, suggestions, or pull requests — or help implement PAIX in your own service.
+Open an issue or submit a pull request to:
+
+* Improve the protocol
+* Suggest new use cases
+* Expand example integrations
+* Implement PAIX in your own product or service
+
 See `CONTRIBUTING.md` for contribution guidelines.
 
 ---
 
 ## 📄 License
 
-PAIX is released under the [MIT License](./LICENSE)
+PAIX is released under the MIT License.
+You are free to use, implement, and extend the protocol.
 
 ---
