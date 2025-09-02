@@ -15,7 +15,7 @@ PAIX turns email into a universal communication layer between:
 * Individuals
 * Their personal AIs (AI twins)
 * Services and providers
-* **Other people’s personal AIs**
+* Other people’s personal AIs
 
 It works anywhere email works — making it the most practical and universal path into the agentic internet.
 
