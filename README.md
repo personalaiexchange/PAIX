@@ -1,7 +1,7 @@
 # PAIX Protocol
 
 **Personal AI eXchange (PAIX)**
-An open protocol for the agentic internet — built on email.
+An open (email) protocol for the agentic internet.
 
 ---
 
